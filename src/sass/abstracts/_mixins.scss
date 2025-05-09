@@ -1,0 +1,64 @@
+@mixin breakpoint($bp) {
+
+  @if $bp==mobil {
+    @media (min-width:$bp_mobil){
+      @content;
+    }
+  }
+
+  @if $bp==tablet {
+    @media (min-width:$bp-tablet) {
+      @content;
+    }
+  }
+
+  @if $bp==desktop {
+    @media (min-width:$bp-desktop){
+      @content;
+    }
+  }
+
+  @if $bp==desktopxl {
+    @media (min-width:$bp-desktop-xl){
+      @content;
+    }
+  }
+}
+
+//heading typography
+@mixin heading($size) {
+  font-family: 'Bebas Neue', sans-serif; 
+  @if $size == XL {
+    font-size: 96px;
+    line-height: 88px;
+  }
+  @else if $size == L {
+    font-size: 70px;
+    line-height: 70px;
+  }
+  @else if $size == M {
+    font-size: 60px;
+    line-height: 55px;
+  }
+  @else if $size == S {
+    font-size: 36px;
+    line-height: 36px;
+  }
+  @else if $size == XS {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+
+//body typography
+@mixin body($size) {
+  font-family: $font-text;
+  @if $size == M {
+    font-size: 22px;
+    line-height: 32px;
+  }
+  @else if $size == S {
+    font-size: 18px;
+    line-height: 28px;
+  }
+}

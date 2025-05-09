@@ -1,0 +1,27 @@
+@import './abstracts/abstracts';
+@import './vendors/vendors';
+@import './base/base';
+@import './components/components';
+@import './layout/layout';
+@import './pages/pages';
+@import './themes/themes';
+@import 'settings';
+@import 'tailwindcss';
+
+.us{
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-top: 20px;
+    &__title{
+        font-family: $font-title;
+        font-size: 28px;
+        color: $color-darkBlue;
+    }
+
+    &__text{
+        @include body(S);
+        color:$color-grey;
+        margin-top:5px;
+    }
+
+}
