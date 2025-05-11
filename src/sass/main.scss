@@ -9,19 +9,43 @@
 @import 'tailwindcss';
 
 .us{
+    margin-left: 16px;
+    margin-right: 16px;
     padding-left: 16px;
     padding-right: 16px;
+    padding-top:16px;
     margin-top: 20px;
+//     background-color: $color-blue;
+//     box-shadow: 1px 1px 4px -1px rgba(110,189,253,0.39);
+// -webkit-box-shadow: 1px 1px 4px -1px rgba(110,189,253,0.39);
+// -moz-box-shadow: 1px 1px 4px -1px rgba(110,189,253,0.39);
+    
     &__title{
-        font-family: $font-title;
-        font-size: 28px;
-        color: $color-darkBlue;
+        @include heading(S);
+        color:$color-darkBlue;
+        text-align: center;
     }
 
     &__text{
         @include body(S);
         color:$color-grey;
         margin-top:5px;
+        text-align:justify;
+    }
+
+    .button{
+        margin: 0 auto;
+        margin-top: 10px;
+        display: flex;
+        width: 160px;
+        img{
+            width: 27px;
+            overflow-y: hidden;
+            margin-left:5px;
+        }
+        &:hover{
+            background-color: $color-hover;
+        }
     }
 
 }

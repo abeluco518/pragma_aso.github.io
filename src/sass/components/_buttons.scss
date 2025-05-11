@@ -1,3 +1,28 @@
 #menu{
     transition: all 0.3s ease;
 }
+
+.button{
+    display: inline-block;
+    padding: 12px 24px 10px 24px;
+    border-radius: 25px;
+}
+
+.button-primary{
+    background-color:#1d3557 ;
+    color:#FFFFFF;
+    &:hover{
+        background-color:#457b9d;
+    }
+}
+
+.button--secondary{
+        background-color:#FFFFFF;
+        color:#1d3557;
+        &:hover{
+            background-color:#94bdbe;
+        }
+    }
+    
+
+
