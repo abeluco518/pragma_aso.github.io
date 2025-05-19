@@ -1,60 +1,45 @@
 .hero{
-    background-image: url('../../src/img/foto_ap.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 0px ;
+    position:relative;
     display:flex;
     flex-direction:column;
     align-items:center;
-    padding-left:  16px;
-    padding-right :16px;
-    padding-top: 20px;
-    padding-bottom: 70px;
+    padding:10px 16px 70px 16px;
     z-index: 1;
+    gap:20px;
+    height: 350px;
 
-    &__logo{
-        width: 75px;
-        margin-bottom:8px;
-    }
-
-    &__title{
-        color: $color-blue;
-        text-align: center;
     
-        @include heading(S);
+    
+
+    &__background{
+        width: 100%;
+        height: 100%;
+        position:absolute;
+        z-index: -1;
+        top:-10px;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit:cover ;
+            object-position: 0 0px;
+        }
+
+    }
+    &__title{
+        display:none;
     }
 
     &__subtitle{
-        font-size: 16px;
-        font-weight: 400;
-        color: $color-blue;
+        @include heading(S);
         text-align: center;
-        @include heading(XS);
+        color: white;
+        margin-top: 30px;
+        margin-bottom: 70px;
     }
 
-    &__text{
-        @include body(S);
-        color:#FFFFFF;
-        text-align: center;
-        font-size: 16px;
-    }
+    
 
-    &__buttons{
-        display: flex;
-        gap:20px;
-        align-items: center;
-        margin-top: 20px;
-        flex-grow: 1;
-
-        a{
-            display: inline-block;
-            background-color: $color-darkBlue;
-            flex-grow: 1;
-            padding: 8px;
-            font-family: $font-text;
-            color: $color-blue;
-            border-radius: 8px;
-        }
+    
         
-    }
+    
 }

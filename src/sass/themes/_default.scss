@@ -5,7 +5,8 @@ html * {
 }
  
 body {
-    background-color: $bg-color-primary;
+    position:relative;
+    background-color: $color-background;
     padding-bottom: 200px;
 
 } 
