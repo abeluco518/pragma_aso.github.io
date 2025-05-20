@@ -18,7 +18,7 @@
 
 .header__container{
         position: sticky;
-        z-index: 10;
+        z-index: 100;
 
     @include breakpoint (tablet-horizontal){
         position: sticky;
@@ -27,6 +27,7 @@
         justify-content: space-between;
         padding:15px 20px;
         background-color: $color-background;
+        padding-left:40px;
         
     }
 }

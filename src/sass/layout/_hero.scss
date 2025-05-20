@@ -15,13 +15,15 @@
     @include breakpoint(tablet){
         aspect-ratio: 3/1.7;
         width: 100%;
-        height: fit-content;
+        aspect-ratio: 10/8;
         padding-left: 40px;
         padding-right: 40px;
     }
     @include breakpoint(tablet-horizontal){
         padding-left: 120px;
         padding-right: 120px;
+        aspect-ratio: 10/8;
+
 
     }
     // aspect-ratio: 161/178;
@@ -42,7 +44,7 @@
             top:-70px
         }
         @include breakpoint (tablet-horizontal){
-            top:-70px;
+            top:0px;
         }
         
     }
@@ -62,10 +64,10 @@
                 
             }
             @include breakpoint(tablet){
-                object-position: 0 -200px;
+                object-position: 0 -150px;
             }
             @include breakpoint(tablet-horizontal){
-                object-position: 0 -400px;
+                object-position: 0 -200px;
             }
     }
 
@@ -90,6 +92,7 @@
             @include heading(XL);
             color: white;
             margin-top: 60px;
+            max-width: 790px;
         }
     }
 

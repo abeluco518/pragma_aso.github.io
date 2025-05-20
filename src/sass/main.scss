@@ -78,8 +78,8 @@
         padding-right: 40px;
     }
     @include breakpoint(tablet-horizontal){
-        padding-left: 120px;
-        padding-right: 120px;
+        padding-left: 90px;
+        padding-right: 90px;
     }
     
 
@@ -110,8 +110,7 @@
         }
         @include breakpoint(tablet-horizontal){
             flex-wrap: nowrap;
-            gap:none;
-            justify-content: space-between;
+            width: 100%;
             margin-bottom: 80px;
             
         }
@@ -128,7 +127,11 @@
             margin-bottom:0;
         }
         @include breakpoint(tablet-horizontal){
-            width: 320px;
+            
+            flex-basis: 0;
+            flex-shrink: 1;
+            flex-grow: 1;
+            max-width: 320px;
         }
         
 
