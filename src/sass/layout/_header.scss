@@ -1,5 +1,4 @@
 .header{
-    top:0;
     z-index: 20000;
     display: flex;
     justify-content: space-between;
@@ -19,6 +18,8 @@
 .header__container{
         position: sticky;
         z-index: 100;
+        top:0;
+
 
     @include breakpoint (tablet-horizontal){
         position: sticky;
