@@ -11,6 +11,11 @@
       @content;
     }
   }
+  @if $bp==tablet-horizontal {
+    @media (min-width:$bp-tablet-horizontal) {
+      @content;
+    }
+  }
 
   @if $bp==desktop {
     @media (min-width:$bp-desktop){

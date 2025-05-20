@@ -1,5 +1,4 @@
 .header{
-    position: sticky;
     top:0;
     z-index: 20000;
     display: flex;
@@ -8,10 +7,26 @@
     background-color: $color-background;
 
     &__logo{
-        img{width: 120px;}
+        img{width: 120px;
+        @include breakpoint(tablet-horizontal){
+            width: 140px;
+        }}
         
     }
-   
+    
+}
 
+.header__container{
+        position: sticky;
+        z-index: 10;
 
+    @include breakpoint (tablet-horizontal){
+        position: sticky;
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        padding:15px 20px;
+        background-color: $color-background;
+        
+    }
 }

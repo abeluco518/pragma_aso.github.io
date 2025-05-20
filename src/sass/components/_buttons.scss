@@ -1,11 +1,16 @@
 #menu{
     transition: all 0.3s ease;
+    @include breakpoint(tablet-horizontal){
+            display:none;
+        }
+        
+        
 }
 
 .cta{
     background-color: $color-cta;
     display: inline-block;
-    padding:12px 24px 12px 24px;
+    padding:16px 28px 16px 28px;
     border-radius:5px;
     font-family: $font-text;
     color:white;
@@ -33,7 +38,7 @@
 
 
     &:hover{
-        opacity:0.5;
+        opacity:0.8;
     }
     
 
@@ -46,6 +51,11 @@
     font-family: $font-text;
     color:white;
     font-weight: 600;
+    border:solid white 1px;
+    @include breakpoint(tablet-horizontal){
+        @include body(M);
+        color:white;
+    }
     
     
 }
@@ -59,6 +69,21 @@
             margin-left:5px;
         }
 
+}
+
+.how__button{
+    @include breakpoint(tablet){
+        font-size: 18px;
+        margin-top:50px;
+    }
+}
+
+.help__button{
+    @include breakpoint(tablet-horizontal){
+        @include body(M);
+        color:white;
+        border: solid white 1px;
+    }
 }
     
 
