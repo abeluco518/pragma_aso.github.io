@@ -6,10 +6,11 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: 'index.html',
-        verification:'google76365b1ad045cc01.html'
+        verification:'google76365b1ad045cc01.html',
+        style:'style.css'
         // Añade aquí todos los html que quieras incluir
       }
     }
   },
-  base: '/pragma_aso.github.io/'
+  base: './'
 })
