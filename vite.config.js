@@ -1,5 +1,15 @@
-import { defineConfig } from 'vite';
+// vite.config.js
+import { defineConfig } from 'vite'
 
 export default defineConfig({
-  base: '/pragma_aso.github.io/', // correcto para repos tipo *.github.io
-});
+  build: {
+    rollupOptions: {
+      input: {
+        main: 'index.html',
+        verification:'google76365b1ad045cc01.html'
+        // Añade aquí todos los html que quieras incluir
+      }
+    }
+  },
+  base: '/pragma_aso.github.io/'
+})
