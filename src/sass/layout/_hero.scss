@@ -7,7 +7,7 @@
     z-index: 1;
     gap:20px;
     aspect-ratio: 3/4;
-    overflow: hidden;
+    overflow-x: hidden;
     @media (min-width:376px) {
         aspect-ratio: 10/11.5;
         gap:40px;
