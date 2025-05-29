@@ -7,7 +7,8 @@
     z-index: 1;
     gap:20px;
     aspect-ratio: 3/4;
-    overflow-x: hidden;
+    width: 100vh;
+    
     @media (min-width:376px) {
         aspect-ratio: 10/11.5;
         gap:40px;
@@ -17,12 +18,12 @@
         width: 100%;
         aspect-ratio: 10/8;
         padding-left: 40px;
-        padding-right: 40px;
+        
     }
     @include breakpoint(tablet-horizontal){
         padding-left: 120px;
         padding-right: 120px;
-        aspect-ratio: 10/8;
+        
 
 
     }
@@ -32,16 +33,17 @@
     
 
     &__background{
-        overflow-x: hidden;
         width: 100%;
         height: 100%;
-        position:absolute;
-        z-index: -1;
+        position:fixed;
+        z-index: -1000000;
         top:-10px;
+        
         @include breakpoint (tablet){
-            width: 145%;
+            width: 100%;
             height: 110%;
-            top:-70px
+            top:-70px;
+         
         }
         @include breakpoint (tablet-horizontal){
             top:0px;
@@ -52,22 +54,23 @@
         
         
     &__image{
-            overflow-x: hidden;
             display: block;
-            width: 100%;
+            width: 145%;
             height: 100%;
             object-fit:cover ;
             object-position: 0 -75px;
+            
+            
     
             @media (min-width:376px) {
                 object-position:center;
                 
             }
             @include breakpoint(tablet){
-                object-position: 0 -150px;
+                object-position: center -150px;
             }
             @include breakpoint(tablet-horizontal){
-                object-position: 0 -200px;
+                object-position: center -200px;
             }
     }
 
