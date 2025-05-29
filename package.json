@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "postbuild": "cp CNAME dist/CNAME",
     "preview": "vite preview",
     "deploy": "gh-pages -d dist"
   },
