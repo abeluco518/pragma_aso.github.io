@@ -1,0 +1,352 @@
+
+.page-home{
+    
+
+
+.us{padding: 16px;
+    margin:20px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    @include breakpoint(tablet){
+        margin-top: 75px;
+        padding-left: 40px;
+        padding-right: 40px;
+    };
+    @include breakpoint(tablet-horizontal){
+        display: flex;
+        flex-wrap: wrap;
+        height: 600px;
+        width: auto;
+        align-items:normal;
+        align-content: space-between;
+        justify-content: normal;
+        margin-top: 100px;
+    }
+    
+//     background-color: $color-blue;
+//     box-shadow: 1px 1px 4px -1px rgba(110,189,253,0.39);
+// -webkit-box-shadow: 1px 1px 4px -1px rgba(110,189,253,0.39);
+// -moz-box-shadow: 1px 1px 4px -1px rgba(110,189,253,0.39);
+
+    &__img{
+        width: 70%;
+        height: 400px;
+        object-fit: cover;
+        @include breakpoint(tablet-horizontal){
+            order:-10;
+            width: 40%;
+            margin-top: 100px;
+
+        }
+    }
+    
+    &__title{
+        @include heading(S);
+        text-align: center;
+        @include breakpoint(tablet-horizontal){
+            @include heading(M);
+            margin-bottom: 30px;
+            width: 60%;
+           
+        }
+    }
+
+    &__text{
+        @include body(S);
+        text-align: center;
+        margin-top:20px;
+        @include breakpoint(tablet){
+            margin-bottom: 40px;
+        }
+        @include breakpoint(tablet-horizontal){
+            @include body(M);
+            line-height: 35px;
+            margin-bottom: 80px;
+            text-align:justify;
+            width: 55%;
+            margin-left: auto;
+        }
+    }
+
+    &__button{
+        margin: 0 auto;
+        margin-top: 30px;
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        font-family: $font-text;
+        
+        @include breakpoint (tablet-horizontal){
+            margin-top: 0;
+        }
+        
+        img{
+            width: 27px;
+            overflow-y: hidden;
+            margin-left:5px;
+        }
+       
+    }
+    
+
+}
+
+.how{
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    padding: 0 16px 0 16px;
+    margin-top:75px;
+    @include breakpoint(tablet){
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    @include breakpoint(tablet-horizontal){
+        padding-left: 90px;
+        padding-right: 90px;
+    }
+    
+
+    &__title{
+        @include heading(S);
+        margin-bottom: 20px;
+        @include breakpoint(tablet){
+            margin-bottom:50px;
+        };
+        @include breakpoint(tablet-horizontal){
+            @include heading(M);
+            margin-bottom: 60px;
+        }
+        
+
+    }
+
+    &__categories{
+        display: flex;
+        flex-direction: column;
+        gap:20px;
+        @include breakpoint(tablet){
+            gap:30px;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+        @include breakpoint(tablet-horizontal){
+            flex-wrap: nowrap;
+            width: 100%;
+            margin-bottom: 80px;
+            
+        }
+    }
+
+    &__article{
+        width: 275px;
+        -webkit-box-shadow: 5px 5px 6px -6px #000000; 
+        box-shadow: 5px 5px 6px -6px #000000;
+        background-color: $color-background-box;
+        padding:25px 13px 20px 27px;
+        margin-bottom:30px;
+        @include breakpoint(tablet){
+            margin-bottom:0;
+        }
+        @include breakpoint(tablet-horizontal){
+            
+            flex-basis: 0;
+            flex-shrink: 1;
+            flex-grow: 1;
+            max-width: 320px;
+        }
+        
+
+        img{
+            width: 50px;
+            margin-bottom: 15px;
+        }
+        
+
+        h3{
+            font-family: $font-text;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            @include breakpoint(tablet-horizontal){
+            font-size: 18px;
+            }
+        }
+        p{
+            font-family: $font-text;
+            font-size: 0.9rem;
+            line-height: 24px;
+            @include breakpoint(tablet-horizontal){
+            font-size: 18px;
+            }
+        }
+    }
+
+    &__text{
+        @include body(S);
+        margin-bottom: 30px;
+        text-align: center;
+        font-weight: 600;
+        @include breakpoint(tablet-horizontal){
+        @include body(M);
+            text-align: left;
+            width: 400px;
+            margin:0;
+        }
+    }
+    &__bottom{
+        @include breakpoint(tablet-horizontal){
+            width: fit-content;
+            display:flex;
+            align-items: center;
+            gap:90px;
+            background-image: url('../src/img/Arrow-black.svg');
+            background-repeat: no-repeat;
+            background-size: 50px;
+            background-position: 420px center;
+        }
+    }
+    
+}
+
+.help{
+    margin-top: 60px;
+    padding: 10px 16px 10px 16px;
+    
+    @include breakpoint(tablet){
+        padding-left: 40px;
+        padding-right: 40px;
+        margin-top: 80px;
+        margin-bottom: 80px
+    }
+    @include breakpoint(tablet-horizontal){
+        padding-left: 120px;
+        padding-right: 120px;   
+        margin-top: 120px ;
+        margin-bottom: 120px;
+        background-image: url('../src/img/circles.png');
+        background-repeat: no-repeat;
+        background-position: 94% center;
+        
+
+    }
+    &__container{
+        display:flex;
+        flex-direction: column;
+        align-items:center;
+        gap:30px;
+        @include breakpoint(tablet-horizontal){
+            width: 60%;
+        }
+
+    }
+    
+
+    &__title{
+        @include heading(S);
+        text-align:center;
+        @include breakpoint(tablet){
+            margin-bottom: 10px;
+        };
+        @include breakpoint(tablet-horizontal){
+            @include heading(M);
+            margin-bottom: 40px;
+            text-align: left;
+        }
+    }
+
+    &__text{
+        @include body(S);
+        text-align: center;
+        strong{
+            font-weight: 600;
+            @include body(S);
+            @include breakpoint(tablet-horizontal){
+                @include body(M);
+            }
+        }
+        @include breakpoint(tablet){
+            margin-bottom: 30px;
+        }
+        @include breakpoint(tablet-horizontal){
+            @include body(M);
+            margin-bottom: 45px;
+            text-align: left;
+        }
+        
+    }
+
+}
+
+.contact{
+    margin-top: 50px;
+    padding-left:16px;
+    padding-right:16px;
+    display: flex;
+    align-items: center;
+    flex-direction:column;
+    @include breakpoint(tablet){
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    &__title{
+        @include heading(S);
+        text-align: center;
+        margin-bottom: 20px;
+        @include breakpoint(tablet){
+            margin-bottom: 50px;
+        }
+        @include breakpoint(tablet-horizontal){
+            @include heading(M);
+            margin-bottom: 40px;
+        }
+    }
+
+    &__categories{
+        align-self: flex-start;
+        
+    }
+    &__info{
+        padding-left:5px;
+        display: flex;
+        gap:10px;
+        margin-bottom: 20px;
+        align-items: center;
+        
+        img{
+            width: 25px;
+            height: 25px;
+        }
+
+        a{
+            @include body(S);
+            @include breakpoint(tablet-horizontal){
+                @include body(M);
+            }
+        } 
+    }
+    &__map{
+            width: 100%;
+            margin-top: 50px;
+            @include breakpoint(tablet-horizontal){
+            margin-bottom: 60px;
+        }
+        }
+
+    &__button{
+        display:inline-block;
+        margin-top: 30px;
+        @include breakpoint(tablet-horizontal){
+            @include body(M);
+            color:white;
+            border:solid white 1px;
+        }
+    }
+    
+}
+}

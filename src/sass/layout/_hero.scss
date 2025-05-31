@@ -1,80 +1,49 @@
 .hero{
-    position:relative;
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    padding:10px 16px 70px 16px;
-    z-index: 1;
-    gap:20px;
-    aspect-ratio: 3/4;
-    width: 100vh;
+    padding-top:30px;
+    
+    background-image: url('../src/img/foto_ap1.jpg');
+    background-repeat: no-repeat;
+    background-size: 140%;
+    background-attachment: fixed;
+    height: calc(100vh - 57px);
+    background-position: center bottom; /* o center center */
+ 
+    
     
     @media (min-width:376px) {
-        aspect-ratio: 10/11.5;
-        gap:40px;
     }
     @include breakpoint(tablet){
-        aspect-ratio: 3/1.7;
-        width: 100%;
-        aspect-ratio: 10/8;
-        padding-left: 40px;
+        background-image: url('../src/img/foto_ap2x.png');
+        background-position: center 60px;
         
     }
     @include breakpoint(tablet-horizontal){
-        padding-left: 120px;
-        padding-right: 120px;
-        
-
+        background-position: left 50%;
 
     }
-    // aspect-ratio: 161/178;
 
-    
-    
-
-    &__background{
-        width: 100%;
-        height: 100%;
-        position:fixed;
-        z-index: -1000000;
-        top:-10px;
-        
-        @include breakpoint (tablet){
-            width: 100%;
-            height: 110%;
-            top:-70px;
-         
-        }
-        @include breakpoint (tablet-horizontal){
-            top:0px;
-        }
+    &__content{
+        position:relative;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        z-index: 1;
+        gap:20px;
+    @media (min-width:376px) {
+        gap:40px;
+    }
+    @include breakpoint(tablet){
         
     }
+    @include breakpoint(tablet-horizontal){
+        justify-content: flex-start;
+        width: 50%;
+        margin-left:50px;
 
-        
-        
-    &__image{
-            display: block;
-            width: 145%;
-            height: 100%;
-            object-fit:cover ;
-            object-position: 0 -75px;
-            
-            
-    
-            @media (min-width:376px) {
-                object-position:center;
-                
-            }
-            @include breakpoint(tablet){
-                object-position: center -150px;
-            }
-            @include breakpoint(tablet-horizontal){
-                object-position: center -200px;
-            }
     }
 
-    
+    }
+
     &__title{
         display:none;
         
@@ -94,7 +63,8 @@
         @include breakpoint (tablet-horizontal){
             @include heading(XL);
             color: white;
-            margin-top: 60px;
+            text-align: left;
+       
             max-width: 790px;
         }
     }

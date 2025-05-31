@@ -19,7 +19,6 @@
   <!-- Favicon de la página -->
   <link rel="icon" href="./public/favicon.ico" type="image/x-icon" />
 
-  <link rel="stylesheet" href="style.css">
 
   <!-- Codificación-->
   <meta charset="UTF-8" />
@@ -38,7 +37,7 @@
     rel="stylesheet">
 </head>
 
-<body>
+<body class="page-home">
   <header class="header__container">
     <div class="header">
       <a href="index.html" class="header__logo"><img src="./src/img/IMAGOTIP 1.png" alt="logo" width="100" /></a>
@@ -47,7 +46,7 @@
       </button>
     </div>
     <nav class="header__nav">
-      <ul>
+      <ul class="header__nav-list">
         <li><a class="active" href="index.html">Home</a></li>
         <li><a href="#">Qui som</a></li>
         <li><a href="#">Com ajudem</a></li>
@@ -67,18 +66,14 @@
   </footer>
   <main>
     <section class="hero">
+      <div class="hero__content">
 
-      <picture class="hero__background">
-        <!-- Imagen para pantallas medianas>-->
-        <source media="(min-width: 768px)" srcset="./src/img/foto_ap2x.png">
-        <!-- Imagen predeterminada (fallback) -->
-        <img src="src/img/foto_ap1.png" alt="Descripción de la imagen" class="hero__image">
-      </picture>
+     
 
-
-      <h2 class="hero__subtitle">Perquè cuidar la ment és un dret, no un privilegi.</h2>
-      <h1 class="hero__title">Associació per a la salut mental</h1>
-      <a href="#" class="hero__button cta">DONA ARA</a>
+        <h2 class="hero__subtitle">Perquè cuidar la ment és un dret, no un privilegi.</h2>
+        <h1 class="hero__title">Associació per a la salut mental</h1>
+        <a href="#" class="hero__button cta">DONA ARA</a>
+      </div>
     </section>
 
     <section class="us">
@@ -89,7 +84,9 @@
         perquè entenem que la salut mental és un dret fonamental i no està a
         l'abast de tots i totes.
       </p>
+      <img class="us__img" src="src/img/nens_pragma.png" alt="foto nens" width="300">
       <a href="#" class="button us__button">Descobreix més <img src="./src/img/Arrow-black.svg" alt="" /></a>
+      
     </section>
     <section class="how">
       <h2 class="how__title">Com ajudem?</h2>
@@ -112,17 +109,21 @@
           <p>Acompanyament a l’aprenentatge i dificultats escolars.</p>
         </article>
       </div>
-      <p class="how__text">Treballem des d’una perspectiva multidisciplinària per oferir atenció integral i adaptada a
-        cada cas.</p>
-      <a href="#" class="how__button button">Com funciona?</a>
+      <div class="how__bottom">
+        <p class="how__text">Treballem des d’una perspectiva multidisciplinària per oferir atenció integral i adaptada a
+          cada cas.</p>
+        <a href="#" class="how__button button">Com funciona?</a>
+      </div>
 
     </section>
     <section class="help">
-      <h2 class="help__title">Ajuda’ns a cuidar la salut mental de tothom</h1>
+      <div class="help__container">
+        <h2 class="help__title">Ajuda’ns a cuidar la salut mental de tothom</h1>
 
-        <p class="help__text">Amb el teu suport, podem oferir atenció psicològica a famílies que no s’ho poden permetre.
-          <strong> Qualsevol aportació, per petita que sigui, pot canviar una vida.</strong></p>
-        <a href="#" class="help__button cta">DONAR</a>
+          <p class="help__text">Amb el teu suport, podem oferir atenció psicològica a famílies que no s’ho poden permetre.
+              <strong> Qualsevol aportació, per petita que sigui, pot canviar una vida.</strong></p>
+          <a href="#" class="help__button cta">DONAR</a>
+      </div>
 
     </section>
 

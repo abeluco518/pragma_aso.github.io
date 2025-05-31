@@ -1,5 +1,9 @@
 #menu{
     transition: all 0.3s ease;
+    background-color: transparent;
+    border:0;
+    padding:0;
+    margin: 0;
     @include breakpoint(tablet-horizontal){
             display:none;
         }
@@ -33,6 +37,9 @@
     align-items: center;
     font-weight: 500;
     font-family: $font-text;
+    @include breakpoint(tablet){
+            font-size: 18px;
+        }
     
     
 
@@ -55,6 +62,8 @@
     @include breakpoint(tablet-horizontal){
         @include body(M);
         color:white;
+        margin-right: auto;
+        margin-left: 90px;
     }
     
     
@@ -72,9 +81,17 @@
 }
 
 .how__button{
+    min-width: 190px;
+    width: fit-content;
+    height: fit-content;
+    margin: 0 auto;
+    
     @include breakpoint(tablet){
         font-size: 18px;
         margin-top:50px;
+    }
+    @include breakpoint(tablet-horizontal){
+        margin:0;
     }
 }
 

@@ -1,7 +1,7 @@
 .header__nav{
     z-index: -10;
     position:absolute;
-    top :-176px;
+    top :-190px;
     width: 100%;
     left: 0;
     right: 0;
@@ -13,7 +13,7 @@
         margin:0;
         position: static;
         background-color: $color-background;
-        ul{
+        &-list{
             display: flex;
             gap:20px;
         }
@@ -28,8 +28,8 @@
     a{
         display: inline-block;
         width: 100%;
-        padding-top: 8px;
-        padding-bottom: 8px;
+        padding-top: 13px;
+        padding-bottom: 13px;
         padding-left: 16px;
         transition-duration: 0.3s;
         color: #FFFFFF;

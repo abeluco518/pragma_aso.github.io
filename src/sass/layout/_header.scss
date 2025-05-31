@@ -1,15 +1,17 @@
 .header{
-    width: 100%;
     z-index: 20000;
     display: flex;
     justify-content: space-between;
     padding: 10px 25px 10px 25px;
     background-color: $color-background;
+    
+   
+    
 
     &__logo{
         img{width: 120px;
         @include breakpoint(tablet-horizontal){
-            width: 140px;
+          
         }}
         
     }
