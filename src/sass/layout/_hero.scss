@@ -1,7 +1,7 @@
 .hero{
     padding-top:30px;
     
-    background-image: url('foto_ap1.jpg');
+    background-image: url('../img/foto_ap1.jpg');
     background-repeat: no-repeat;
     background-size: 140%;
     background-attachment: fixed;
@@ -13,7 +13,7 @@
     @media (min-width:376px) {
     }
     @include breakpoint(tablet){
-        background-image: url('../src/img/foto_ap2x.png');
+        background-image: url('../img/foto_ap2x.png');
         background-position: center 60px;
         
     }
