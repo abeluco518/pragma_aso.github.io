@@ -6,7 +6,7 @@
     background-size: 140%;
     background-attachment: fixed;
     height: calc(100vh - 57px);
-    background-position: center bottom; /* o center center */
+    background-position: center top; /* o center center */
  
     
     
@@ -15,10 +15,14 @@
     @include breakpoint(tablet){
         background-image: url('../img/foto_ap2x.png');
         background-position: center 60px;
+        height: 60vh;
+
         
     }
     @include breakpoint(tablet-horizontal){
-        background-position: left 50%;
+        
+        background-position: left top;
+        height: 90vh;
 
     }
 
@@ -38,6 +42,7 @@
     @include breakpoint(tablet-horizontal){
         width: 50%;
         margin-left:50px;
+        
 
     }
 
@@ -64,6 +69,7 @@
             color: white;
        
             max-width: 790px;
+            margin-top:15px;
         }
     }
 
