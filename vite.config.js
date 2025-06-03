@@ -7,11 +7,11 @@ export default defineConfig({
       input: {
         main: 'index.html',
         verification:'google76365b1ad045cc01.html',
-        style:'style.css',
-        cname:'CNAME'
+        
+        
         // Añade aquí todos los html que quieras incluir
       }
     }
   },
-  base: '/'
+  base: './'
 })

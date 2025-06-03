@@ -36,7 +36,6 @@
         
     }
     @include breakpoint(tablet-horizontal){
-        justify-content: flex-start;
         width: 50%;
         margin-left:50px;
 
@@ -63,7 +62,6 @@
         @include breakpoint (tablet-horizontal){
             @include heading(XL);
             color: white;
-            text-align: left;
        
             max-width: 790px;
         }

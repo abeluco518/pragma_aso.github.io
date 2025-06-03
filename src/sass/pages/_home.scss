@@ -15,9 +15,11 @@
         padding-right: 40px;
     };
     @include breakpoint(tablet-horizontal){
+        padding-left: 100px;
+        padding-right: 100px;
         display: flex;
         flex-wrap: wrap;
-        height: 600px;
+        height: 640px;
         width: auto;
         align-items:normal;
         align-content: space-between;
@@ -37,7 +39,7 @@
         @include breakpoint(tablet-horizontal){
             order:-10;
             width: 40%;
-            margin-top: 100px;
+            height: 90%;
 
         }
     }
@@ -49,6 +51,7 @@
             @include heading(M);
             margin-bottom: 30px;
             width: 60%;
+            margin-left: auto;  
            
         }
     }
@@ -63,7 +66,7 @@
         @include breakpoint(tablet-horizontal){
             @include body(M);
             line-height: 35px;
-            margin-bottom: 80px;
+            margin-bottom: 60px;
             text-align:justify;
             width: 55%;
             margin-left: auto;
@@ -217,6 +220,7 @@
     margin-top: 60px;
     padding: 10px 16px 10px 16px;
     
+    
     @include breakpoint(tablet){
         padding-left: 40px;
         padding-right: 40px;
@@ -228,9 +232,8 @@
         padding-right: 120px;   
         margin-top: 120px ;
         margin-bottom: 120px;
-        background-image: url('../src/img/circles.png');
-        background-repeat: no-repeat;
-        background-position: 94% center;
+        position:relative;  
+        
         
 
     }
@@ -240,9 +243,23 @@
         align-items:center;
         gap:30px;
         @include breakpoint(tablet-horizontal){
-            width: 60%;
+            width: 50%;
         }
 
+    }
+
+    &__img{
+        width: 100%;
+        @include breakpoint(tablet){
+            width: 50%;
+            margin-bottom:30px;
+        };
+        @include breakpoint(tablet-horizontal){
+            width: 33%;
+            position: absolute;
+            top:130px;
+            right:150px;
+        }
     }
     
 
@@ -286,12 +303,29 @@
     margin-top: 50px;
     padding-left:16px;
     padding-right:16px;
-    display: flex;
-    align-items: center;
-    flex-direction:column;
+    
+  
     @include breakpoint(tablet){
         padding-left: 40px;
         padding-right: 40px;
+    }
+    @include breakpoint(tablet-horizontal){
+        padding-left: 100px;
+        padding-right: 100px;
+        position: relative;
+        margin-bottom: 100px;
+    }
+
+    &__container{
+        display: flex;
+        align-items: center;
+        flex-direction:column;
+        @include breakpoint(tablet-horizontal){
+            align-items: flex-start;
+            width: 40%;
+            
+        }
+
     }
 
     &__title{
@@ -303,7 +337,7 @@
         }
         @include breakpoint(tablet-horizontal){
             @include heading(M);
-            margin-bottom: 40px;
+            margin-bottom: 90px;
         }
     }
 
@@ -317,6 +351,7 @@
         gap:10px;
         margin-bottom: 20px;
         align-items: center;
+       
         
         img{
             width: 25px;
@@ -334,7 +369,11 @@
             width: 100%;
             margin-top: 50px;
             @include breakpoint(tablet-horizontal){
-            margin-bottom: 60px;
+            position: absolute;
+            right:100px;
+            top:50px;
+            height: 90%;
+            width: 37.5%;
         }
         }
 

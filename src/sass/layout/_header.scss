@@ -1,9 +1,12 @@
-.header{
+.header__container{
     z-index: 20000;
     display: flex;
     justify-content: space-between;
     padding: 10px 25px 10px 25px;
     background-color: $color-background;
+    @include breakpoint (tablet-horizontal){
+        padding: 0;
+    }
     
    
     
@@ -18,7 +21,7 @@
     
 }
 
-.header__container{
+.header{
         position: sticky;
         z-index: 100;
         top:0;
@@ -29,9 +32,8 @@
         display:flex;
         align-items: center;
         justify-content: space-between;
-        padding:15px 20px;
+        padding:20px 70px;
         background-color: $color-background;
-        padding-left:40px;
         
     }
 }
