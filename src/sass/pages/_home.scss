@@ -1,6 +1,87 @@
 
 .page-home{
     
+.hero{
+    padding-top:30px;
+    
+    background-image: url('../img/foto_ap1.jpg');
+    background-repeat: no-repeat;
+    background-size: 140%;
+    background-attachment: fixed;
+    height: calc(100vh - 57px);
+    background-position: center top; /* o center center */
+ 
+    
+    
+    @media (min-width:376px) {
+    }
+    @include breakpoint(tablet){
+        background-image: url('../img/foto_ap2x.png');
+        background-position: center 60px;
+        height: 9sdasd0vh;
+
+        
+    }
+    @include breakpoint(tablet-horizontal){
+        
+        background-position: left top;
+        height: 90vh;
+
+    }
+
+    &__content{
+        position:relative;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        z-index: 1;
+        gap:20px;
+    @media (min-width:376px) {
+        gap:40px;
+    }
+    @include breakpoint(tablet){
+        
+    }
+    @include breakpoint(tablet-horizontal){
+        width: 50%;
+        margin-left:50px;
+        
+
+    }
+
+    }
+
+    &__title{
+        display:none;
+        
+    }
+
+    &__subtitle{
+        @include heading(S);
+        text-align: center;
+        color: white;
+        margin-top: 30px;
+        max-width: 394px;;
+        @include breakpoint(tablet){
+            @include heading (M);
+            color: white;
+            max-width: 100%;
+        }
+        @include breakpoint (tablet-horizontal){
+            @include heading(XL);
+            color: white;
+       
+            max-width: 790px;
+            margin-top:15px;
+        }
+    }
+
+    
+
+    
+        
+    
+}
 
 
 .us{padding: 16px;
@@ -34,9 +115,11 @@
 
     &__img{
         width: 70%;
-        height: 400px;
+        height: 250px;
+        margin-top: 30px;
         object-fit: cover;
         @include breakpoint(tablet-horizontal){
+            margin:0;
             order:-10;
             width: 40%;
             height: 90%;
@@ -303,6 +386,9 @@
     margin-top: 50px;
     padding-left:16px;
     padding-right:16px;
+    display: flex;
+    align-items: center;
+    flex-direction:column;
     
   
     @include breakpoint(tablet){
@@ -314,19 +400,11 @@
         padding-right: 100px;
         position: relative;
         margin-bottom: 100px;
+        align-items: flex-start;
+        
     }
 
-    &__container{
-        display: flex;
-        align-items: center;
-        flex-direction:column;
-        @include breakpoint(tablet-horizontal){
-            align-items: flex-start;
-            width: 40%;
-            
-        }
-
-    }
+   
 
     &__title{
         @include heading(S);
@@ -343,6 +421,10 @@
 
     &__categories{
         align-self: flex-start;
+        @include breakpoint(tablet-horizontal){
+            
+            width: 50%;
+        }
         
     }
     &__info{
@@ -371,8 +453,8 @@
             @include breakpoint(tablet-horizontal){
             position: absolute;
             right:100px;
-            top:50px;
-            height: 90%;
+            bottom:0;
+            height: 80%;
             width: 37.5%;
         }
         }
