@@ -54,7 +54,11 @@
     ;        }
 
             &__list{
-                @include body(S);
+                li{
+                    @include body(S);
+                    color:white;
+                }
+                
                 text-align: center;
                 margin-bottom: 5px;
                 color:white;

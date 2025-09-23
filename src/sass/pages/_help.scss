@@ -1,0 +1,136 @@
+body.help{
+    .container{
+        padding: 30px 20px;
+    }
+    .services{
+            margin-bottom: 30px;
+            margin-top: 30px;
+
+        .container{
+           display: flex;
+            flex-direction: column;
+            gap:20px;
+            align-items: center;
+
+        }
+        &__categorie{
+            margin: 0 auto;
+            width: 275px;
+            -webkit-box-shadow: 5px 5px 6px -6px #000000; 
+            box-shadow: 5px 5px 6px -6px #000000;
+            background-color: $color-background-inverted;
+            padding:25px 13px 50px 27px;
+            margin-bottom:30px;
+            position: relative
+
+        }
+        &__main-title{
+            @include heading(S);
+            
+            text-align: center;
+        }
+        &__main-text{
+            @include body(S);
+            text-align: center;
+            margin-bottom: 30px;
+            max-width: 600px;
+            font-style: italic;
+        }
+
+        &__title{
+            @include heading(XS);
+            margin-bottom: 10px;
+            text-align: center;
+            color:white;
+        }
+        &__text{
+            @include body(S);
+            text-align: center;
+            color:white;
+            margin-bottom: 10px;
+        }
+
+        &__info{
+            font-family:$font-text;
+            position:absolute;
+            bottom: 0;
+            width: 100%;
+            background-color: white;
+            display: inline-block;
+            right: 0;
+            padding: 12px;
+            text-align: center;
+            color:rgb(63, 63, 63);
+            text-decoration: none; 
+            font-weight: bold;       
+        }
+        &__cta{
+            display: inline-block;
+            width: fit-content;
+            text-align: center;
+        }
+        
+    }
+
+    .proces{
+        background-color: $color-background-inverted;
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__main-title{
+            @include heading(S);
+            text-align: center;
+            color:white;
+            margin-bottom: 20px;
+        }
+        &__steps{
+            display: flex;
+            flex-direction: column;
+            gap:20px;
+            align-items: center;
+            max-width: 300px;
+            margin: 0 auto;
+            
+        }
+        &__1step{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+           
+            text-align: center;
+        }
+        &__img{
+            width: 60px;
+            margin-bottom: 10px ;
+        }
+        .smaller{
+            width: 67px;
+            margin-bottom: 10px ;
+        }
+        &__arrow{
+            transform: rotate(90deg);
+            margin-bottom: 20px;
+        }
+        &__text{
+            @include body(S);
+            color:white;
+            max-width: 200px;
+        }
+        &__titletext{
+            @include body(S);
+            color:white;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        &__cta{
+            margin-top: 20px;
+        }
+        
+    }
+
+    
+}
