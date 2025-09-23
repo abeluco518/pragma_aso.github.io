@@ -54,9 +54,13 @@
     ;        }
 
             &__list{
-                li{
+                li,span{
                     @include body(S);
-                    color:white;
+                    color:white;    
+                    text-align: justify;
+                }
+                li{
+                    margin-bottom: 7px;
                 }
                 
                 text-align: center;
@@ -66,5 +70,30 @@
                 text-align: left;
             }
         }
+    }
+
+    .fundadores{
+        display: flex;
+        flex-direction:column;
+        gap: 20px;
+        margin-top: 30px;
+
+        &__professional{
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__article-header{
+            display: flex;
+            align-items: center;
+        
+        }
+
+        &__img{
+            border-radius: 50%;
+            width: 80px;
+           
+        }
+
     }
 }
