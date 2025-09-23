@@ -8,6 +8,7 @@ export default defineConfig({
         main: 'index.html',
         verification:'google76365b1ad045cc01.html',
         qui:'qui-som.html',
+        help:'help.html'
         
         
         // Añade aquí todos los html que quieras incluir
