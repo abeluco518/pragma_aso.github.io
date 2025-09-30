@@ -1,0 +1,77 @@
+.donate-page{
+    .donate{
+        &__content{
+            padding: 20px;
+            text-align: center;
+        }
+
+        &__title{
+            @include heading(S);
+            margin-bottom: 15px;
+        }
+
+        &__subtitle{
+            @include body(S);
+            width: 90%;
+            margin: 0 auto;
+            margin-bottom: 30px;
+        }
+        &__seleccio{
+            width: 350px;
+            margin: 0 auto;
+            display: flex;
+            border-radius: 50px;
+
+            button{
+                flex:1;
+                border-radius:0px;
+                border:1px solid grey;
+                padding:5px;
+                background-color: white;
+                @include body(S);
+
+            }
+        }
+
+        &__form{
+            width: 350px;
+            background-color: white;
+            margin: 30px auto;
+            display: flex;
+            flex-direction: column;
+            
+        }
+
+        &__text{
+            @include body(S);
+            font-weight: bold;
+            margin-bottom: 10px;
+            border: 1px solid rgb(194, 194, 194);
+            padding: 10px;
+            text-align: center;
+            background-color: rgb(245, 244, 244);
+        }
+
+        &__amounts{
+            display:grid;
+            padding: 20px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+
+            .donate__amount-button{
+                display:inline-block;
+                @include body(S);
+                text-align: center;
+                background-color: #e9eae5;
+                padding: 10px;
+                border-radius: 10px;
+                border:1px solid grey;
+            }
+            #wanted_amount{
+                grid-column: 2/span 2;
+            }
+        }
+
+      
+    }
+}
