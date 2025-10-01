@@ -72,29 +72,29 @@
         <h1 class="donate__title">La teva ajuda transforma vidas</h1>
         <p class="donate__subtitle">Cada donació, per petita que sigui, ens permet oferir suport psicològic i psiquiàtric a famílies que ho necessiten. Amb la teva col·laboració, podem garantir que la salut mental no sigui un privilegi.</p>
       </div>
-      <div class="donate__seleccio">
-        <button class="donate__once">Una vegada</button>
+      <div class="donate__seleccio " data-times="once">
+        <button class="donate__once add-blue">Una vegada</button>
         <button class="donate__monthly">Mensualment</button>
       </div>
-      <div class="donate__form" >
+      <div class="donate__form" data-amount="">
         <p class="donate__text">Escull la quantitat que vols donar</p>
         <div class="donate__amounts">
-          <a class="donate__amount-button" data-amount="5">5€</a>
-          <a  class="donate__amount-button" href="" data-amount="10">10€</a>
-          <a  class="donate__amount-button" href="" data-amount="50">50€</a>
-          <a  class="donate__amount-button" href="" data-amount="100">100€</a>
-          <input  id='wanted_amount' class="donate__amount-button" type="text" placeholder="Altre quantitat" data-amount=""/>
+          <button  class="donate__amount-button " data-amount="5">5€</button >
+          <button   class="donate__amount-button" href="" data-amount="10">10€</button >
+          <button   class="donate__amount-button" href="" data-amount="50">50€</button >
+          <button   class="donate__amount-button" href="" data-amount="100">100€</button >
+          <input  id='wanted_amount' class="donate__amount-button" type="number" placeholder="Altre quantitat" data-amount=""/>
         </div>
         
         
 
         
 
-        <button class="donate__submit cta">DONA ARA</button>
+        <button  id="submit-form" class="donate__submit cta">DONA ARA</button>
       </div>
     </section>
   </main>
-    
+    <script src="./src/donacio.js"></script>
     <script type="module" src="./src/main.js"></script>
 </body>
 

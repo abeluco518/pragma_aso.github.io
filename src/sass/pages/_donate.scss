@@ -21,10 +21,16 @@
             margin: 0 auto;
             display: flex;
             border-radius: 50px;
+            
+
+        .add-blue{
+            background-color:$color-background-inverted;
+            color:white
+        }
 
             button{
                 flex:1;
-                border-radius:0px;
+                border-radius:10px;
                 border:1px solid grey;
                 padding:5px;
                 background-color: white;
@@ -56,7 +62,7 @@
             display:grid;
             padding: 20px;
             margin-top: 10px;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
 
             .donate__amount-button{
                 display:inline-block;
@@ -70,8 +76,21 @@
             #wanted_amount{
                 grid-column: 2/span 2;
             }
+            .add-blue{
+                background-color:$color-background-inverted;
+                color:white;
+                &::placeholder{
+                    color:white;
+                }
+            }
+
+            
         }
 
-      
+        &__submit{
+                margin:20px;
+                margin-top:0;
+                border:0;
+            }
     }
 }
