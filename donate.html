@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Título para el navegador y los buscadores -->
+  <title>Associacio Pragma | Qui som</title>
+
+  <!-- Descripción de la página para los buscadores -->
+  <meta name="description" content="Que es l'assaociacio pragma" />
+
+  <meta name="google-site-verification" content="ZmbVl0RttXSpK4d6dG39nSTvWLXpr-CmRy16uAoO5Rc" />
+
+  <!-- Palabras clave para los buscadores -->
+  <meta name="keywords" content="Molins de Rei, associacio, psicologia, salud mental, pragma, h5" />
+
+  <!-- Autor de la página -->
+  <meta name="author" content="AAC" />
+
+  <!-- Favicon de la página -->
+  <link rel="icon" href="./assets/favicon-DcqdMm-H.ico" type="image/x-icon" />
+
+  
+
+
+  <!-- Codificación-->
+  <meta charset="UTF-8" />
+
+  <!-- Para que la web sea responsive -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Para algunos navegadores móviles -->
+  <meta name="theme-color" content="#1e7bbf" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Anton&&family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+  <script type="module" crossorigin src="./assets/main-BmSeEVFi.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/main-DPoz_pCi.css">
+</head>
+
+<body class="donate-page"> 
+  <header class="header">
+    <div class="header__container">
+      <a href="index.html" class="header__logo"><img src="./assets/IMAGOTIP%201-DVszklrc.png" alt="logo" width="100" /></a>
+      <button id="menu">
+        <img src="./assets/togleMenu-DnO-1wSC.png" alt="toogle icon" width="30" />
+      </button>
+    </div>    
+    <nav class="header__nav">
+      <ul class="header__nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="qui-som.html">Qui som</a></li>
+        <li><a href="help.html">Com ajudem</a></li>
+        <li><a class="active" href="donate.html">Donar</a></li>
+        <li><a href="solicitar.html">Solicitar ajuda</a></li>
+        <li><a href="contacte.html">Contacta'ns</a></li>
+      </ul>
+    </nav>
+  </header>
+  <footer class="footer">
+    <img class="footer__logo" src="./assets/logo_inverted-D4I3tCsy.png" alt="logo">
+    <div class="footer__social">
+      <a href="https://www.instagram.com/institut_pragma/"><img src="./assets/instagram-7b9PKUq1.png" alt="instagram"></a>
+      <a href="https://www.facebook.com/InstitutPragma/"><img src="./assets/facebook-D_bjJDCx.png" alt="Facebook"></a>
+    </div>
+
+  </footer>
+  <main>
+    <section class="donate">
+      <div class="donate__content">
+        <h1 class="donate__title">La teva ajuda transforma vidas</h1>
+        <p class="donate__subtitle">Cada donació, per petita que sigui, ens permet oferir suport psicològic i psiquiàtric a famílies que ho necessiten. Amb la teva col·laboració, podem garantir que la salut mental no sigui un privilegi.</p>
+      </div>
+      <div class="donate__seleccio " data-times="once">
+        <button class="donate__once add-blue">Una vegada</button>
+        <button class="donate__monthly">Mensualment</button>
+      </div>
+      <div class="donate__form" data-amount="">
+        <p class="donate__text">Escull la quantitat que vols donar</p>
+        <div class="donate__amounts">
+          <button  class="donate__amount-button " data-amount="5">5€</button >
+          <button   class="donate__amount-button" href="" data-amount="10">10€</button >
+          <button   class="donate__amount-button" href="" data-amount="50">50€</button >
+          <button   class="donate__amount-button" href="" data-amount="100">100€</button >
+          <input  id='wanted_amount' class="donate__amount-button" type="number" placeholder="Altre quantitat" data-amount=""/>
+        </div>
+        
+        
+
+        
+
+        <button  id="submit-form" class="donate__submit cta">DONA ARA</button>
+      </div>
+    </section>
+  </main>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="./src/donacio.js"></script>
+</body>
+
+</html>
