@@ -4,8 +4,8 @@
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 // --- CONFIGURACIÓN DE REDIRECCIÓN (AJUSTA ESTAS 2 URLs) ---
-const SUCCESS_URL = 'https://tudominio.com/gracies'; 
-const CANCEL_URL = 'https://tudominio.com/torna-a-donar';
+const SUCCESS_URL = '../../correct-payment.html'; 
+const CANCEL_URL = '../../correct-payment.html';
 // -----------------------------------------------------------
 
 module.exports = async (req, res) => {
