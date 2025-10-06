@@ -7,7 +7,6 @@
     "dev": "vite",
     "dev-server": "vite",
     "sass-watch": "sass src/sass/main.scss --watch",
-    "build": "vite build",
     "preview": "vite preview",
     "deploy": "gh-pages -d dist"
   },
