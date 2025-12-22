@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. Inicializamos Stripe usando window.Stripe para evitar el error "undefined"
     let stripe;
     if (window.Stripe) {
-        stripe = window.Stripe('pk_test_51SBGxMEXQiLN7acL3dqTBnaFKVpUL29O3vBXHFG3dU0ADEIdKrluIO9A9O3W01YfZMu589vUc5dQaiPfkkw0Nl100026cwdFEp');
+        stripe = window.Stripe('pk_live_51SBGx6I9oHZMMldyZSlt3TxXJvWPjpjFO8clU8Qj6qJwPUYewedoxL5eKDvjW2nh853HFa7slSyvPmoP4AD0k54Y00UJ2KM0S3');
     } else {
         console.error("Error: La librería de Stripe no se ha cargado. Revisa tu HTML.");
         return;
