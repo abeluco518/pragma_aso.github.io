@@ -2,24 +2,52 @@
 .page-home{
     
 .hero{
-    padding-top:30px;
-    
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    padding: 90px 0 54px;
     background-image: url('/img/foto_ap1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     min-height: calc(100svh - 57px);
-    background-position: center top; /* o center center */
+    background-position: center top;
+
+    &::before{
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background:
+            linear-gradient(180deg, rgba($color-darkBlue, 0.38) 0%, rgba($color-darkBlue, 0.18) 42%, rgba($color-darkBlue, 0.68) 100%),
+            linear-gradient(90deg, rgba($color-darkBlue, 0.78) 0%, rgba($color-darkBlue, 0.44) 45%, rgba($color-darkBlue, 0.08) 100%);
+    }
+
+    &::after{
+        content: '';
+        position: absolute;
+        left: 16px;
+        right: 16px;
+        bottom: 18px;
+        height: 1px;
+        background: rgba(255, 255, 255, 0.45);
+        z-index: -1;
+    }
 
     @include breakpoint(tablet){
         background-image: url('/img/foto_ap2x.png');
-        background-position: center 60px;
+        align-items: center;
+        background-position: center top;
         min-height: 720px;
+        padding: 110px 0 90px;
         
     }
     @include breakpoint(tablet-horizontal){
         
-        background-position: left top;
+        background-position: center top;
         min-height: 760px;
+        padding: 120px 0;
 
     }
 
@@ -31,6 +59,8 @@
         z-index: 1;
         gap:20px;
         padding: 0 16px;
+        width: min(100%, 620px);
+        animation: hero_content_enter 0.9s ease both;
     @media (min-width:376px) {
         gap:40px;
     }
@@ -38,8 +68,9 @@
         
     }
     @include breakpoint(tablet-horizontal){
-        width: 50%;
-        margin-left:50px;
+        width: min(52%, 760px);
+        align-items: flex-start;
+        margin-left: clamp(50px, 7vw, 120px);
         padding: 0;
         
 
@@ -56,8 +87,8 @@
         @include heading(S);
         text-align: center;
         color: white;
-        margin-top: 30px;
-        max-width: 394px;;
+        max-width: 430px;
+        text-shadow: 0 4px 24px rgba(0, 0, 0, 0.36);
         @include breakpoint(tablet){
             @include heading (M);
             color: white;
@@ -68,7 +99,7 @@
             color: white;
        
             max-width: 790px;
-            margin-top:15px;
+            text-align: left;
         }
     }
 
@@ -85,6 +116,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
     
     @include breakpoint(tablet){
         margin-top: 75px;
@@ -114,12 +146,20 @@
         height: 250px;
         margin-top: 30px;
         object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 26px 52px rgba(0, 0, 0, 0.18);
+        transition: transform 0.35s ease, box-shadow 0.35s ease;
         @include breakpoint(tablet-horizontal){
             margin:0;
             order:-10;
             width: 40%;
             height: 90%;
 
+        }
+
+        &:hover{
+            transform: translateY(-4px);
+            box-shadow: 0 34px 62px rgba(0, 0, 0, 0.22);
         }
     }
     
@@ -227,10 +267,12 @@
     &__article{
         width: min(100%, 320px);
         -webkit-box-shadow: 5px 5px 6px -6px #000000; 
-        box-shadow: 5px 5px 6px -6px #000000;
+        box-shadow: 0 18px 38px rgba(0, 0, 0, 0.12);
         background-color: $color-background-box;
         padding:25px 13px 20px 27px;
         margin-bottom:30px;
+        border-radius: 8px;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
         @include breakpoint(tablet){
             margin-bottom:0;
         }
@@ -241,11 +283,21 @@
             flex-grow: 1;
             max-width: 320px;
         }
+
+        &:hover{
+            transform: translateY(-6px);
+            box-shadow: 0 26px 48px rgba(0, 0, 0, 0.18);
+        }
         
 
         img{
             width: 50px;
             margin-bottom: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        &:hover img{
+            transform: translateY(-3px) scale(1.04);
         }
         
 
@@ -294,6 +346,7 @@
 .help{
     margin-top: 60px;
     padding: 10px 16px 10px 16px;
+    overflow: hidden;
     
     
     @include breakpoint(tablet){
@@ -325,6 +378,9 @@
 
     &__img{
         width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 24px 54px rgba(0, 0, 0, 0.18);
+        animation: soft_float 5s ease-in-out infinite;
         @include breakpoint(tablet){
             width: 50%;
             margin-bottom:30px;
@@ -381,6 +437,7 @@
     display: flex;
     align-items: center;
     flex-direction:column;
+    overflow: hidden;
     
   
     @include breakpoint(tablet){
@@ -425,6 +482,11 @@
         gap:10px;
         margin-bottom: 20px;
         align-items: center;
+        transition: transform 0.25s ease;
+
+        &:hover{
+            transform: translateX(4px);
+        }
        
         
         img{
@@ -443,6 +505,8 @@
             width: 100%;
             max-width: 720px;
             margin-top: 50px;
+            border-radius: 8px;
+            box-shadow: 0 22px 46px rgba(0, 0, 0, 0.16);
             @include breakpoint(tablet-horizontal){
             position: absolute;
             right:100px;

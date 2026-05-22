@@ -1,5 +1,7 @@
 .donate-page{
     .donate{
+        padding-bottom: 60px;
+
         &__content{
             padding: 20px;
             text-align: center;
@@ -29,6 +31,7 @@
             margin: 0 auto;
             display: flex;
             border-radius: 50px;
+            box-shadow: 0 14px 34px rgba(0, 0, 0, 0.12);
             
 
         .add-blue{
@@ -43,7 +46,13 @@
                 padding:5px;
                 background-color: white;
                 @include body(S);
+                cursor: pointer;
+                transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
 
+            }
+
+            button:hover{
+                transform: translateY(-1px);
             }
         }
 
@@ -53,6 +62,15 @@
             margin: 30px auto;
             display: flex;
             flex-direction: column;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 20px 44px rgba(0, 0, 0, 0.12);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        &__form:hover{
+            transform: translateY(-3px);
+            box-shadow: 0 28px 56px rgba(0, 0, 0, 0.16);
             
         }
 
@@ -82,6 +100,12 @@
                 padding: 10px;
                 border-radius: 10px;
                 border:1px solid grey;
+                cursor: pointer;
+                transition: background-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
+            }
+
+            .donate__amount-button:hover{
+                transform: translateY(-2px);
             }
             #wanted_amount{
                 grid-column: 2/span 2;

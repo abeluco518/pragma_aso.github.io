@@ -1,26 +1,46 @@
 import './sass/main.scss';
 
-const menuButton = document.querySelector('#menu');
-const navBar = document.querySelector('.header__nav');
-let menuOpen = false;
-
-if (menuButton && navBar) {
-    menuButton.addEventListener('click', () => {
-        menuOpen = !menuOpen;
-
-        if (menuOpen) {
-            navBar.classList.add('is-open');
-            menuButton.style.transform = 'rotate(180deg)';
-        } else {
-            navBar.classList.remove('is-open');
-            menuButton.style.transform = 'rotate(0deg)';
-        }
-    });
-}
-
-
-
 document.addEventListener('DOMContentLoaded', () => {
+    const menuButton = document.querySelector('#menu');
+    const navBar = document.querySelector('.header__nav');
+    let menuOpen = false;
+
+    if (menuButton && navBar) {
+        menuButton.addEventListener('click', () => {
+            menuOpen = !menuOpen;
+
+            if (menuOpen) {
+                navBar.classList.add('is-open');
+                menuButton.style.transform = 'rotate(180deg)';
+            } else {
+                navBar.classList.remove('is-open');
+                menuButton.style.transform = 'rotate(0deg)';
+            }
+        });
+    }
+
+    const revealTargets = document.querySelectorAll(
+        'main section:not(.hero), .how__article, .services__categorie, .proces__1step, .fundadores__professional, .contact-form, .donate__form'
+    );
+
+    if (revealTargets.length) {
+        revealTargets.forEach((target) => target.classList.add('reveal'));
+
+        if ('IntersectionObserver' in window) {
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (!entry.isIntersecting) return;
+                    entry.target.classList.add('is-visible');
+                    revealObserver.unobserve(entry.target);
+                });
+            }, { threshold: 0.14 });
+
+            revealTargets.forEach((target) => revealObserver.observe(target));
+        } else {
+            revealTargets.forEach((target) => target.classList.add('is-visible'));
+        }
+    }
+
     const seleccioContainer = document.querySelector('.donate__seleccio');
     const amountContainer = document.querySelector('.donate__amounts');
     const submitForm = document.querySelector('#submit-form');
