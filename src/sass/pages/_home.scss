@@ -4,28 +4,22 @@
 .hero{
     padding-top:30px;
     
-    background-image: url('../img/foto_ap1.jpg');
+    background-image: url('/img/foto_ap1.jpg');
     background-repeat: no-repeat;
-    background-size: 140%;
-    background-attachment: fixed;
-    height: calc(100vh - 57px);
+    background-size: cover;
+    min-height: calc(100svh - 57px);
     background-position: center top; /* o center center */
- 
-    
-    
-    @media (min-width:376px) {
-    }
-    @include breakpoint(tablet){
-        background-image: url('../img/foto_ap2x.png');
-        background-position: center 60px;
-        height: 9sdasd0vh;
 
+    @include breakpoint(tablet){
+        background-image: url('/img/foto_ap2x.png');
+        background-position: center 60px;
+        min-height: 720px;
         
     }
     @include breakpoint(tablet-horizontal){
         
         background-position: left top;
-        height: 90vh;
+        min-height: 760px;
 
     }
 
@@ -36,6 +30,7 @@
         align-items:center;
         z-index: 1;
         gap:20px;
+        padding: 0 16px;
     @media (min-width:376px) {
         gap:40px;
     }
@@ -45,6 +40,7 @@
     @include breakpoint(tablet-horizontal){
         width: 50%;
         margin-left:50px;
+        padding: 0;
         
 
     }
@@ -114,7 +110,7 @@
 // -moz-box-shadow: 1px 1px 4px -1px rgba(110,189,253,0.39);
 
     &__img{
-        width: 70%;
+        width: min(100%, 420px);
         height: 250px;
         margin-top: 30px;
         object-fit: cover;
@@ -229,7 +225,7 @@
     }
 
     &__article{
-        width: 275px;
+        width: min(100%, 320px);
         -webkit-box-shadow: 5px 5px 6px -6px #000000; 
         box-shadow: 5px 5px 6px -6px #000000;
         background-color: $color-background-box;
@@ -290,10 +286,6 @@
             display:flex;
             align-items: center;
             gap:90px;
-            background-image: url('../src/img/Arrow-black.svg');
-            background-repeat: no-repeat;
-            background-size: 50px;
-            background-position: 420px center;
         }
     }
     
@@ -449,6 +441,7 @@
     }
     &__map{
             width: 100%;
+            max-width: 720px;
             margin-top: 50px;
             @include breakpoint(tablet-horizontal){
             position: absolute;

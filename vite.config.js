@@ -10,6 +10,7 @@ export default defineConfig({
         qui:'qui-som.html',
         help:'help.html',
         donate:'donate.html',
+        contacte:'contacte.html',
         
         
         // Añade aquí todos los html que quieras incluir

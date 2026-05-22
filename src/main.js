@@ -4,22 +4,30 @@ const menuButton = document.querySelector('#menu');
 const navBar = document.querySelector('.header__nav');
 let menuOpen = false;
 
-menuButton.addEventListener('click', () => {
-  menuOpen = !menuOpen;
+if (menuButton && navBar) {
+    menuButton.addEventListener('click', () => {
+        menuOpen = !menuOpen;
 
-  if (menuOpen) {
-    navBar.classList.add('is-open');
-    menuButton.style.transform = 'rotate(180deg)';
-  } else {
-    navBar.classList.remove('is-open');
-    menuButton.style.transform = 'rotate(0deg)';
-  }
-});
+        if (menuOpen) {
+            navBar.classList.add('is-open');
+            menuButton.style.transform = 'rotate(180deg)';
+        } else {
+            navBar.classList.remove('is-open');
+            menuButton.style.transform = 'rotate(0deg)';
+        }
+    });
+}
 
 
-// --- PEGA ESTO EN TU main.js ---
 
 document.addEventListener('DOMContentLoaded', () => {
+    const seleccioContainer = document.querySelector('.donate__seleccio');
+    const amountContainer = document.querySelector('.donate__amounts');
+    const submitForm = document.querySelector('#submit-form');
+
+    // Si los elementos no existen en esta página, no hacemos nada (evita errores en otras páginas)
+    if (!seleccioContainer || !amountContainer || !submitForm) return;
+
     // 1. Inicializamos Stripe usando window.Stripe para evitar el error "undefined"
     let stripe;
     if (window.Stripe) {
@@ -29,17 +37,9 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
-    // 2. Selectores
-    const seleccioContainer = document.querySelector('.donate__seleccio');
-    const amountContainer = document.querySelector('.donate__amounts');
-    const submitForm = document.querySelector('#submit-form');
-
     // Estado local
     let selectedFrequency = 'once'; 
     let selectedAmount = null;
-
-    // Si los elementos no existen en esta página, no hacemos nada (evita errores en otras páginas)
-    if (!seleccioContainer || !amountContainer || !submitForm) return;
 
     // --- LÓGICA DE BOTONES ---
 

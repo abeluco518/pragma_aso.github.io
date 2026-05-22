@@ -3,32 +3,61 @@
     .container{
         margin: 0 auto;
         max-width: 350px;
+        @include breakpoint(tablet){
+            max-width: 680px;
+        }
+        @include breakpoint(desktop){
+            max-width: 1040px;
+        }
     }
 
     .historia{
         margin-top: 20px;
         margin-bottom: 20px;
         padding: 0 20px; 
+        @include breakpoint(tablet){
+            margin-top: 60px;
+            margin-bottom: 60px;
+        }
         
         &__title{
             @include heading(S);
             margin-bottom: 10px;
             text-align: center;
+            @include breakpoint(desktop){
+                @include heading(M);
+                text-align: left;
+            }
 
 ;        }
 
         &__text{
             @include body(S);
-            text-align: center;
+            text-align: justify;
             margin-bottom: 5px;
+            padding-left: 5px;
+            @include breakpoint(desktop){
+                @include body(M);
+            }
         }
     }
     .datos{
         background-color: $color-background-inverted;
+
         padding: 10px;
+        @include breakpoint(desktop){
+            padding:0;
+            display: flex;
+            
+            
+        }
         .objectius{
             margin-top: 20px;
             margin-bottom: 20px;
+            @include breakpoint(desktop){
+                margin:0;
+                flex-grow: 1;
+            }
             &__title{
                 @include heading(S);
                 margin-bottom: 10px;
@@ -46,11 +75,23 @@
         .valors{
             margin-top: 20px;
             margin-bottom: 20px;
+            @include breakpoint(desktop){
+                background-color: white;
+                margin:0;
+                flex-grow: 1;
+                padding-top:20px;
+                
+            }
             &__title{
                 @include heading(S);
                 margin-bottom: 10px;
                 text-align: center;
                 color:white;
+                @include breakpoint(desktop){
+                    background-color: white;
+                    color:$color-background-inverted;
+                    @include heading(M)
+                }
     ;        }
 
             &__list{
@@ -80,12 +121,21 @@
             display: flex;
             flex-direction:column;
             gap: 20px;
+            @include breakpoint(tablet-horizontal){
+                max-width: 1120px;
+                display: grid;
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                align-items: stretch;
+            }
         }
 
         &__main-title{
             @include heading(S);
             text-align: center;
             margin-bottom: 30px;
+            @include breakpoint(tablet-horizontal){
+                @include heading(M);
+            }
         }
 
 
@@ -94,7 +144,7 @@
             flex-direction: column;
             background-color:white;
             padding:20px;
-            border-radius: 30px 0 30px 0;
+            border-radius: 8px;
             box-shadow: 7px 6px 5px 0px rgba(0,0,0,0.2);
 -webkit-box-shadow: 7px 6px 5px 0px rgba(0,0,0,0.2);
 -moz-box-shadow: 7px 6px 5px 0px rgba(0,0,0,0.2);

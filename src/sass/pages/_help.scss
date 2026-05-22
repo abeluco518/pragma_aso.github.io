@@ -1,6 +1,8 @@
 body.help{
     .container{
         padding: 30px 20px;
+        max-width: 1120px;
+        margin: 0 auto;
     }
     .services{
             margin-bottom: 30px;
@@ -11,11 +13,16 @@ body.help{
             flex-direction: column;
             gap:20px;
             align-items: center;
+            @include breakpoint(tablet){
+                display: grid;
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                align-items: stretch;
+            }
 
         }
         &__categorie{
             margin: 0 auto;
-            width: 275px;
+            width: min(100%, 320px);
             -webkit-box-shadow: 5px 5px 6px -6px #000000; 
             box-shadow: 5px 5px 6px -6px #000000;
             background-color: $color-background-inverted;
@@ -28,6 +35,9 @@ body.help{
             @include heading(S);
             
             text-align: center;
+            @include breakpoint(tablet){
+                grid-column: 1 / -1;
+            }
         }
         &__main-text{
             @include body(S);
@@ -35,6 +45,10 @@ body.help{
             margin-bottom: 30px;
             max-width: 600px;
             font-style: italic;
+            @include breakpoint(tablet){
+                grid-column: 1 / -1;
+                justify-self: center;
+            }
         }
 
         &__title{
@@ -68,6 +82,10 @@ body.help{
             display: inline-block;
             width: fit-content;
             text-align: center;
+            @include breakpoint(tablet){
+                grid-column: 1 / -1;
+                justify-self: center;
+            }
         }
         
     }
@@ -93,6 +111,11 @@ body.help{
             align-items: center;
             max-width: 300px;
             margin: 0 auto;
+            @include breakpoint(tablet){
+                max-width: 900px;
+                flex-direction: row;
+                align-items: flex-start;
+            }
             
         }
         &__1step{
@@ -114,6 +137,10 @@ body.help{
         &__arrow{
             transform: rotate(90deg);
             margin-bottom: 20px;
+            @include breakpoint(tablet){
+                transform: none;
+                margin: 35px 0 0;
+            }
         }
         &__text{
             @include body(S);

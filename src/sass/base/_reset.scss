@@ -50,3 +50,21 @@ table {
 a{
 	text-decoration: none;
 }
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	background-color: $color-background;
+}
+
+main {
+	flex: 1;
+	order: 2;
+}

@@ -1,0 +1,118 @@
+.page-contacte {
+    .contact-page {
+        width: min(100% - 32px, 1120px);
+        margin: 40px auto 80px;
+        display: grid;
+        gap: 32px;
+
+        @include breakpoint(tablet-horizontal) {
+            grid-template-columns: 0.85fr 1.15fr;
+            align-items: start;
+            gap: 64px;
+            margin-top: 80px;
+        }
+
+        &__title {
+            @include heading(S);
+            margin-bottom: 16px;
+
+            @include breakpoint(tablet) {
+                @include heading(M);
+            }
+        }
+
+        &__text {
+            @include body(S);
+            margin-bottom: 28px;
+            max-width: 560px;
+
+            @include breakpoint(tablet-horizontal) {
+                @include body(M);
+            }
+        }
+
+        &__details {
+            display: grid;
+            gap: 18px;
+        }
+
+        &__detail {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+
+            img {
+                width: 25px;
+                height: 25px;
+                flex: 0 0 auto;
+            }
+
+            a {
+                @include body(S);
+                color: $color-text;
+                overflow-wrap: anywhere;
+            }
+        }
+    }
+
+    .contact-form {
+        display: grid;
+        gap: 18px;
+        padding: 22px;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 5px 5px 12px -10px #000000;
+
+        @include breakpoint(tablet) {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            padding: 32px;
+        }
+
+        &__field {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            &--full {
+                @include breakpoint(tablet) {
+                    grid-column: 1 / -1;
+                }
+            }
+        }
+
+        label {
+            @include body(S);
+            font-weight: 600;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            border: 1px solid #c8d6df;
+            border-radius: 8px;
+            padding: 12px 14px;
+            font-family: $font-text;
+            font-size: 16px;
+            color: $color-text;
+            background-color: #fff;
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        &__submit {
+            border: 0;
+            cursor: pointer;
+            width: 100%;
+
+            @include breakpoint(tablet) {
+                grid-column: 1 / -1;
+                justify-self: start;
+                width: auto;
+            }
+        }
+    }
+}

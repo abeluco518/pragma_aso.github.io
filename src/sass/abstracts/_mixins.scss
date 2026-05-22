@@ -1,7 +1,7 @@
 @mixin breakpoint($bp) {
 
   @if $bp==mobil {
-    @media (min-width:$bp_mobil){
+    @media (min-width:$bp-mobile){
       @content;
     }
   }
